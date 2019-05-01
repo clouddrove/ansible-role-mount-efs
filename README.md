@@ -14,7 +14,7 @@ efs_mount_point: ""
 ```yaml
 - hosts: localhost
   roles:
-    - role: ansible-role-mount_efs
+    - role: ansible-role-mount-efs
       become: true
 ```
 ## 👬 Contribution
