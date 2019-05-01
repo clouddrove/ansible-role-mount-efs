@@ -1,0 +1,7 @@
+---
+# defaults file for ansible-role-mount-efs
+
+efs_user: root
+efs_group: root
+efs_mount_id:
+efs_mount_point: /data

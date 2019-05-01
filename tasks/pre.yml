@@ -1,0 +1,16 @@
+---
+
+- name: install nfs utils
+  apt:
+    pkg: "{{ item }}"
+    state: latest
+  with_items:
+    - nfs-common
+    - autofs
+    - rpcbind
+
+- name: ensure rpcbind service is running
+  service:
+    name: rpcbind
+    state: started
+    enabled: yes

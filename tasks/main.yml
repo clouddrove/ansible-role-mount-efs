@@ -1,0 +1,7 @@
+---
+
+- name: include pre.yml
+  import_tasks: pre.yml
+
+- name: include efs.yml
+  import_tasks: efs.yml

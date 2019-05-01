@@ -1,0 +1,21 @@
+---
+
+- name: start rpcbind
+  service:
+    name: rpcbind
+    state: started
+
+- name: reload rpcbind
+  service:
+    name: rpcbind
+    state: reloaded
+
+- name: restart rpcbind
+  service:
+    name: rpcbind
+    state: restarted
+
+- name: stop rpcbind
+  service:
+    name: rpcbind
+    state: stopped
