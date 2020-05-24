@@ -3,7 +3,7 @@
 - name: install nfs utils
   apt:
     pkg: "{{ item }}"
-    state: latest
+    state: present
   with_items:
     - nfs-common
     - autofs

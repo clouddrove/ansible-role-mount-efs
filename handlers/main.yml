@@ -14,6 +14,7 @@
   service:
     name: rpcbind
     state: restarted
+    enabled: true
 
 - name: stop rpcbind
   service:
