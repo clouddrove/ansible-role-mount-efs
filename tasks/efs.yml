@@ -1,15 +1,16 @@
 ---
 
-- name: create efs mount point
-  file:
+- name: Create efs mount point
+  ansible.builtin.file:
     path: "{{ efs_mount_point }}"
     state: directory
     owner: "{{ efs_user }}"
     group: "{{ efs_group }}"
+    mode: "0755"
 
 
-- name: mount efs volume
-  mount:
+- name: Mount efs volume
+  ansible.builtin.mount:
     name: "{{ efs_mount_point }}"
     src: "{{ efs_mount_id }}.amazonaws.com:/"
     fstype: nfs4

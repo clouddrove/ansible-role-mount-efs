@@ -1,7 +1,7 @@
 ---
 
-- name: install nfs utils
-  apt:
+- name: Install nfs utils
+  ansible.builtin.apt:
     pkg: "{{ item }}"
     state: present
   with_items:
@@ -9,8 +9,8 @@
     - autofs
     - rpcbind
 
-- name: ensure rpcbind service is running
-  service:
-    name: rpcbind
+- name: Ensure rpcbind service is running
+  ansible.builtin.service:
+    name: Rpcbind
     state: started
     enabled: yes
