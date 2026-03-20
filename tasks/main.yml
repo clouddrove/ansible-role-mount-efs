@@ -1,7 +1,7 @@
 ---
 
-- name: include pre.yml
-  import_tasks: pre.yml
+- name: Include pre.yml
+  ansible.builtin.import_tasks: pre.yml
 
-- name: include efs.yml
-  import_tasks: efs.yml
+- name: Include efs.yml
+  ansible.builtin.import_tasks: efs.yml

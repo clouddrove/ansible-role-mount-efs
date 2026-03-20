@@ -1,22 +1,22 @@
 ---
 
-- name: start rpcbind
-  service:
-    name: rpcbind
+- name: Start rpcbind
+  ansible.builtin.service:
+    name: Rpcbind
     state: started
 
-- name: reload rpcbind
-  service:
-    name: rpcbind
+- name: Reload rpcbind
+  ansible.builtin.service:
+    name: Rpcbind
     state: reloaded
 
-- name: restart rpcbind
-  service:
-    name: rpcbind
+- name: Restart rpcbind
+  ansible.builtin.service:
+    name: Rpcbind
     state: restarted
     enabled: true
 
-- name: stop rpcbind
-  service:
-    name: rpcbind
+- name: Stop rpcbind
+  ansible.builtin.service:
+    name: Rpcbind
     state: stopped
